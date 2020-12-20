@@ -10,13 +10,13 @@ function App() {
   
   
   const addToList = () => {
-    axios.post("http://localhost:3001/insert",{
+    axios.post("https://mern-lagi.herokuapp.com/insert",{
       namaPengirim: namaPengirim,
       pesanPengirim: pesanPengirim,
     });
   }
   useEffect(() => {
-    axios.get("http://localhost:3001/read").then((response) => {
+    axios.get("https://mern-lagi.herokuapp.com/read").then((response) => {
       setPesanList(response.data)
     })
     }, []);
